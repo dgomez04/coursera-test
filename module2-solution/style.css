@@ -1,12 +1,14 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
 }
 
 /********** Large devices only **********/
 @media (min-width: 992px) {
   .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
     float: left;
-    border: 1px solid green;
   }
   .col-lg-1 {
     width: 8.33%;
@@ -51,7 +53,6 @@
 @media (min-width: 768px) and (max-width: 991px) {
   .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     float: left;
-    border: 1px solid green;
   }
   .col-md-1 {
     width: 8.33%;
@@ -96,7 +97,6 @@
 @media (max-width: 767px) {
   .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
     float: left;
-    border: 1px solid green;
   }
   .col-sm-1 {
     width: 8.33%;
@@ -144,25 +144,30 @@ h1 {
   text-align: center;
 }
 
+
 body {
   background-color: #f2f2f2
 }
 
 p {
-  position: relative;
   text-align: left;
   border: 2px solid black;
   background-color: grey;
-  width: 45em;
   padding: 80px; grey
   font-family: Helvetica;
   color: black;
+  margin:10px
 }
 
 
+.parent {
+    position: relative;
+}
 
 .title{
-  position: relative; top: 58px; z-index: 1
+  position: absolute;
+  top:10px;
+  right:10px;
 }
 
 
@@ -171,10 +176,9 @@ div.title{
   font-weight: bold;
   border: 2px solid black;
   background-color: pink;
-  width: 118px;
+  width: 50%;
   padding: 10px;
   text-align: center;
-  overflow: auto;
 }
 
 #chicken{
@@ -184,6 +188,7 @@ div.title{
 
 #beef{
   background-color: darkred;
+  color: white;
 }
 
 #sushi{
